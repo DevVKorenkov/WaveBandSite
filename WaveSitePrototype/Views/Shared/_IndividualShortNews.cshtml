@@ -1,0 +1,16 @@
+﻿@model WaveBand.Web.VIewModels.SongViewModel
+
+<div class="col-lg-4 col-md-6 pb-4">
+    <div class="card bg-white rounded shadow-sm" style="border:1px solid #222">
+        <div class="card-body px-3 pt-3 pb-1 row">
+            <div class="col-7"><label class="float-left">@Model.SongModel.ReleaseDate</label></div>
+        </div>
+        <iframe frameborder="0" style="border:none;width:50%;height:180px;" width="50%" height="180" src="@Model.SongModel.SongUrl">
+            Слушайте
+            <a href='@Model.Artist.BandUrl'>
+                Вейв
+            </a>
+            на Яндекс Музыке
+        </iframe>
+    </div>
+</div>
