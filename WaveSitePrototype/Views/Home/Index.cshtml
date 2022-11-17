@@ -1,1 +1,13 @@
-﻿
+﻿@model WaveBand.Web.ViewModels.MainViewModel
+
+<div class="container">
+    <div class="text-center">
+        <br />
+        <div class="row">
+            @foreach (var p in Model.NewsShorts)
+            {
+                <partial name="_IndividualShortNewsCard" model="p" />
+            }
+        </div>
+    </div>
+</div>

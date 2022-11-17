@@ -9,6 +9,7 @@ public class AppDataContext : DbContext
     public DbSet<AuthorModel> AuthorModel { get; set; }
     public DbSet<SongModel> SongModel { get; set; }
     public DbSet<MemberModel> MemberModel { get; set; }
+    public DbSet<NewsShortsModel> NewsShortsModel { get; set; }
 
     public AppDataContext(DbContextOptions<AppDataContext> options) : base(options)
     { 

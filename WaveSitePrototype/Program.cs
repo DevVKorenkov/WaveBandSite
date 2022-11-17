@@ -19,7 +19,8 @@ services.AddDbContext<AppDataContext>(opt
 services.SetSettingsFromSection<Artist>(configuration);
 
 services.AddTransient<INewsRepository, NewsRepository>();
-services.AddTransient<INewsService, NewsService>();
+services.AddScoped<INewsService, NewsService>();
+services.AddScoped<IJsonService, JsonService>();
 
 services.AddControllersWithViews();
 

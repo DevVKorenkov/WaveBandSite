@@ -23,7 +23,7 @@ namespace WaveBand.Web.Repositories
 
         public async Task<IEnumerable<NewsModel>> GetAsync()
         {
-            var sortedNews = await Task.Run(() => _db.NewsModel.Include(x => x.Author).OrderByDescending(x => x.Created));
+            var sortedNews = await Task.Run(() => _db.NewsModel.Include(x => x.Author).Include(x => x.Short).OrderByDescending(x => x.Created));
 
             return sortedNews;
         }

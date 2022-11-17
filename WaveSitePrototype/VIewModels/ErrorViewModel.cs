@@ -1,4 +1,4 @@
-namespace WaveBand.Web.VIewModels
+namespace WaveBand.Web.ViewModels
 {
     public class ErrorViewModel
     {

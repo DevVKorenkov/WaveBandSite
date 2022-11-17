@@ -1,13 +1,11 @@
 ﻿using WaveBand.Web.Models;
 
-namespace WaveBand.Web.VIewModels
+namespace WaveBand.Web.ViewModels
 {
     public class MainViewModel
     {
-        public string LogoPath { get; set; }
+        public MainPageModel MainPage { get; set; }
 
-        public string Definition { get; set; }
-
-        public List<MemberModel> MemberModels { get; set; }
+        public IEnumerable<NewsShortsModel> NewsShorts { get; set; }
     }
 }
