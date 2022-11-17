@@ -2,7 +2,7 @@
 {
     public interface IJsonService
     {
-        T GetJson<T>(Type type, string path);
+        T GetJson<T>(string path);
 
         void SaveJson<T>(T obj, string path);
     }

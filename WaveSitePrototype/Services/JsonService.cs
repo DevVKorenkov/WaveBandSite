@@ -5,9 +5,11 @@ namespace WaveBand.Web.Services
 {
     public class JsonService : IJsonService
     {
-        public T GetJson<T>(Type type, string path)
+        public T GetJson<T>(string path)
         {
-            var obj = JsonSerializer.Deserialize<T>(path);
+            var jsonString = File.ReadAllText(path);
+
+            var obj = JsonSerializer.Deserialize<T>(jsonString);
 
             return obj;
         }
